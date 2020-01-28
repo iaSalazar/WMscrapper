@@ -52,44 +52,12 @@ def search_product():
 
 		print('*-----*------*---------**-----*------*---------*')
 		print(' ')
-		# for idx,url in enumerate(images_tag):
-		# 	print(url['src'])
-		# 	print(idx)
-		# 	fullfilename = os.path.join(title, title+str(idx)+'.jpg')
-		# 	urllib.request.urlretrieve(url['src'],fullfilename)
-
-	# for name in folders:
-	# 	print(name)
-	
+		for idx,url in enumerate(images_tag):
+			print(url['src'])
+			print(idx)
+			fullfilename = os.path.join(title, title+str(idx)+'.jpg')
+			urllib.request.urlretrieve(url['src'],fullfilename)
 		
-
-
-	
-	
-	# print('*-----*------*---------**-----*------*---------*')
-	# print(' ')
-	# for idx,url in enumerate(images_tag):
-	# 	print(url['src'])
-	# 	print(idx)
-	# 	fullfilename = os.path.join(title, title+str(idx)+'.jpg')
-	# 	urllib.request.urlretrieve(url['src'],fullfilename)
-	
-		
-	
-	
-
-		
-	
-
-	# for i in range(1,3):
-	# 	response = requests.get('https://xkcd.com/{}'.format(i))
-		
-	# 	soup = BeautifulSoup(response.content, 'html.parser')
-	# 	image_container = soup.find(id='comic')
-	# 	image_url = image_container.find('img')['src']
-	# 	image_name = image_url.split('/')[-1]
-	# 	urllib.request.urlretrieve('https:{}'.format(image_url),image_name)
-	# 	print(type(image_url))
 
 if __name__ == '__main__':
 	main()
