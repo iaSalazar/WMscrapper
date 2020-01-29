@@ -1,6 +1,5 @@
 FROM python:3
-COPY requirements.txt /tmp
-WORKDIR /tmp
+COPY . /app
+WORKDIR /app
 RUN pip install -r requirements.txt
-EXPOSE 5000
 CMD python ./scrap.py

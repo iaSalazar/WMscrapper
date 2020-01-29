@@ -20,6 +20,11 @@ class Recognizer:
 		print(len(self.Folders))
 		
 	def extract_pictures_text(self):
+
+		try:
+			os.mkdir('afterPics')
+		except FileExistsError as e:
+			print('Ya existe el directorio')
 		
 		for name in self.Folders:
 			print(name)
